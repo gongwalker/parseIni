@@ -71,8 +71,10 @@ func(c *ini)GetConfigToInt64(key string) (int64,error){
 func (c *ini)GetConfigToBool(key string) (bool,error){
 	val,error := c.GetConfig(key)
 	if error == nil {
-		if val != "0" {
-			return true,nil
+		if val == "false" || val == "" {
+			return false, nil
+		} else if val != "0" {
+			return true, nil
 		}
 	}
 	return false,error
