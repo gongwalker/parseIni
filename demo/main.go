@@ -12,8 +12,8 @@ func main()  {
 		return
 	}
 
-	// 默认获取配置值为string型
-	strvalue,err := c.GetConfig("mysql.passwd")
+	// 默认获取配置值为string型 (此函数的另一个别名函数为 GetConfigToString )
+	strvalue,err := c.GetConfig("mysql.passwd") 
 	fmt.Printf("value=%v \t type=%T \t err=%v \n",strvalue,strvalue,err)
 	// 输出 value=abc123 	 type=string 	 err=<nil>
 
