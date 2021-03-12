@@ -146,7 +146,7 @@ func ReadIniFile(filePath string) (*ini,error) {
 				key = rKey
 			}
 			rLen := len(rVal)
-			if rLen > 2 {
+			if rLen > 1 {
 				if rVal[0:1] == "\"" && rVal[len(rVal)-1:rLen] == "\"" {
 					// rVal如果两边都有双引号，去掉双引号
 					rVal = rVal[1:rLen-1]
